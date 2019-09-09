@@ -1,4 +1,6 @@
-/* :root selector is basically same as 'html' in this context. */
+/* This could also just be 'html' selector.
+  More info here: https://stackoverflow.com/questions/15899615/whats-the-difference-between-css3s-root-pseudo-class-and-html
+  */
 :root {
   --primary: #6200ee;
   --primary-variant: #3700b3;
