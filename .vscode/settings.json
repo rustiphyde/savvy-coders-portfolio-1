@@ -18,5 +18,7 @@
   "editor.fontLigatures": true,
   "better-comments.highlightPlainText": true,
   "eslint.autoFixOnSave": true,
+  "stylelint.enable": true,
+  "css.validate": false,
   "files.eol": "\n"
 }
