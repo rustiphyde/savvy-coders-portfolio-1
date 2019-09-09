@@ -4,14 +4,41 @@
   --primary-variant: #3700b3;
   --secondary: #03dac6;
   --secondary-variant: #018786;
+  --background: #fff;
+  --error: #b00020;
+  --primary-text: #fff;
+  --secondary-text: #000;
   --base-spacing: 8px;
-}
-
-h1 {
-  background: var(--primary);
-  margin: calc(var(--base-spacing) * 2);
+  --border-primary: solid var(--primary-variant) 3px;
+  --border-secondary: solid var(--secondary-variant) 3px;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin: calc(var(--base-spacing) * 2);
+}
+
+header,
+section:nth-of-type(odd),
+footer {
+  background: var(--primary);
+  color: var(--primary-text);
+}
+
+nav {
+  border-top: var(--border-secondary);
+  border-bottom: var(--border-secondary);
+}
+
+footer {
+  border-top: var(--border-primary);
+}
+
+nav,
+section:nth-of-type(even) {
+  background: var(--secondary);
+  color: var(--secondary-text);
 }
