@@ -30,6 +30,12 @@ footer {
   color: var(--primary-text);
 }
 
+nav,
+section:nth-of-type(even) {
+  background: var(--secondary);
+  color: var(--secondary-text);
+}
+
 nav {
   border-top: var(--border-secondary);
   border-bottom: var(--border-secondary);
@@ -37,10 +43,4 @@ nav {
 
 footer {
   border-top: var(--border-primary);
-}
-
-nav,
-section:nth-of-type(even) {
-  background: var(--secondary);
-  color: var(--secondary-text);
 }
