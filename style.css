@@ -19,10 +19,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1 {
-  margin: calc(var(--base-spacing) * 2);
-}
-
 header,
 section:nth-of-type(odd),
 footer {
@@ -43,4 +39,11 @@ nav {
 
 footer {
   border-top: var(--border-primary);
+}
+
+/* Layout */
+figure,
+h1,
+h2 {
+  margin: 0;
 }
