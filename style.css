@@ -62,3 +62,27 @@ img {
 h1 {
   text-align: center;
 }
+
+ul {
+  padding: 0;
+}
+
+/* Nav */
+nav ul {
+  /* Remove bullets. */
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  padding: var(--base-spacing) 0;
+}
+
+nav a {
+  /* Remove underline. */
+  text-decoration: none;
+}
+
+/* nav a:hover {
+  background: var(--secondary-variant);
+} */
