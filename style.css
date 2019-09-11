@@ -100,10 +100,13 @@ nav .fas {
 }
 
 .hero {
+  align-items: center;
   background: url(https://picsum.photos/680/420) center center no-repeat;
   /* background-repeat: no-repeat; */
   /* background-position: center center; */
   background-size: cover;
+  display: flex;
   height: 20vh;
+  justify-content: center;
   max-height: 420px;
 }
