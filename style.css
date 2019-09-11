@@ -79,10 +79,21 @@ nav li {
   padding: var(--base-spacing) 0;
 }
 
-nav a {
+nav a,
+.hero a {
   /* Remove underline. */
   text-decoration: none;
 }
+
+.hero a {
+  background: var(--secondary);
+  border-radius: var(--base-spacing);
+  padding: var(--base-spacing);
+}
+
+/* .hero a:hover {
+  background: var(--secondary-variant);
+} */
 
 .fas {
   font-size: 48px;
@@ -110,3 +121,4 @@ nav .fas {
   justify-content: center;
   max-height: 420px;
 }
+
