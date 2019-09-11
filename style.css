@@ -41,6 +41,14 @@ footer {
   border-top: var(--border-primary);
 }
 
+.fas {
+  font-size: 48px;
+}
+
+nav .fas {
+  margin: var(--base-spacing);
+}
+
 /* Layout */
 header {
   display: flex;
