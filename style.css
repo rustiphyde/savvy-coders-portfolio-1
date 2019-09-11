@@ -30,28 +30,6 @@ footer {
   color: var(--primary-text);
 }
 
-nav,
-section:nth-of-type(even) {
-  background: var(--secondary);
-  color: var(--secondary-text);
-}
-
-nav {
-  border-top: var(--border-secondary);
-  border-bottom: var(--border-secondary);
-  min-height: 72px;
-}
-
-footer {
-  border-top: var(--border-primary);
-  padding: calc(var(--base-spacing) * 2);
-}
-
-footer a {
-  color: white;
-}
-
-/* Layout */
 header {
   display: flex;
   flex-direction: column;
@@ -86,6 +64,27 @@ nav li {
   padding: var(--base-spacing) 0;
 }
 
+nav,
+section:nth-of-type(even) {
+  background: var(--secondary);
+  color: var(--secondary-text);
+}
+
+nav {
+  border-top: var(--border-secondary);
+  border-bottom: var(--border-secondary);
+  min-height: 72px;
+}
+
+footer {
+  border-top: var(--border-primary);
+  padding: calc(var(--base-spacing) * 2);
+}
+
+footer a {
+  color: white;
+}
+
 footer ul {
   /* By default, this will do flex-direction: row; */
   display: flex;
@@ -115,10 +114,6 @@ nav a,
   display: inline-block;
   margin: var(--base-spacing) 0;
 }
-
-/* .hero a:hover {
-  background: var(--secondary-variant);
-} */
 
 .fas {
   font-size: 48px;
