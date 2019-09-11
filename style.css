@@ -79,16 +79,31 @@ nav li {
   padding: var(--base-spacing) 0;
 }
 
+section  {
+  padding: calc(var(--base-spacing) * 3);
+}
+
 nav a,
-.hero a {
+.hero a,
+.read-more-btn {
   /* Remove underline. */
   text-decoration: none;
 }
 
-.hero a {
-  background: var(--secondary);
+.hero a,
+.read-more-btn {
   border-radius: var(--base-spacing);
   padding: var(--base-spacing);
+}
+
+.hero a {
+  background: var(--secondary);
+}
+
+.read-more-btn {
+  background: white;
+  display: inline-block;
+  margin: var(--base-spacing) 0;
 }
 
 /* .hero a:hover {
