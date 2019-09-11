@@ -19,6 +19,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+section {
+  padding: calc(var(--base-spacing) * 3);
+}
+
 header,
 section:nth-of-type(odd),
 footer {
@@ -77,10 +81,6 @@ nav ul {
 
 nav li {
   padding: var(--base-spacing) 0;
-}
-
-section  {
-  padding: calc(var(--base-spacing) * 3);
 }
 
 nav a,
