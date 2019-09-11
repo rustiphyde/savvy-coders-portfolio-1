@@ -44,6 +44,11 @@ nav {
 
 footer {
   border-top: var(--border-primary);
+  padding: calc(var(--base-spacing) * 2);
+}
+
+footer a {
+  color: white;
 }
 
 /* Layout */
@@ -69,13 +74,11 @@ h1 {
 }
 
 ul {
+  list-style-type: none;
   padding: 0;
 }
 
-/* Nav */
 nav ul {
-  /* Remove bullets. */
-  list-style-type: none;
   text-align: center;
 }
 
@@ -83,6 +86,13 @@ nav li {
   padding: var(--base-spacing) 0;
 }
 
+footer ul {
+  /* By default, this will do flex-direction: row; */
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a,
 nav a,
 .hero a,
 .read-more-btn {
@@ -128,12 +138,9 @@ nav .fas {
 .hero {
   align-items: center;
   background: url(https://picsum.photos/680/420) center center no-repeat;
-  /* background-repeat: no-repeat; */
-  /* background-position: center center; */
   background-size: cover;
   display: flex;
   height: 20vh;
   justify-content: center;
   max-height: 420px;
 }
-
