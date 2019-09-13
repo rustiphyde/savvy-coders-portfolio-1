@@ -125,7 +125,7 @@ nav .fas {
   transform: translateX(calc(100vw - var(--base-spacing) * 10));
 }
 
-.is-hidden {
+.is-hidden--mobile {
   font-size: 0;
   height: 0;
 }
@@ -140,6 +140,7 @@ nav .fas {
   max-height: 420px;
 }
 
+/* This should apply for tablets and above! */
 @media screen and (min-width: 768px) {
   section {
     display: flex;
@@ -151,8 +152,14 @@ nav .fas {
     max-width: calc(var(--base-spacing) * 15);
     text-align: center;
   }
+
+  .is-hidden--tablet {
+    font-size: 0;
+    height: 0;
+  }
 }
 
+/* This should apply for desktops and above. */
 @media screen and (min-width: 1024px) {
   header {
     flex-direction: row;
@@ -161,5 +168,19 @@ nav .fas {
 
   header figure {
     margin-right: calc(var(--base-spacing) * 2);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .is-hidden--desktop {
+    font-size: 0;
+    height: 0;
+  }
+
+  .is-shown--desktop {
+    font-size: initial;
   }
 }
