@@ -152,3 +152,14 @@ nav .fas {
     text-align: center;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: row;
+    padding: calc(var(--base-spacing) * 2);
+  }
+
+  header figure {
+    margin-right: calc(var(--base-spacing) * 2);
+  }
+}
