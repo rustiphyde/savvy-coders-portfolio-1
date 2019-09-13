@@ -153,6 +153,10 @@ nav .fas {
     text-align: center;
   }
 
+  .hero {
+    height: 40vh;
+  }
+
   .is-hidden--tablet {
     font-size: 0;
     height: 0;
@@ -173,6 +177,10 @@ nav .fas {
   nav ul {
     display: flex;
     justify-content: space-around;
+  }
+
+  .hero {
+    height: 60vh;
   }
 
   .is-hidden--desktop {
