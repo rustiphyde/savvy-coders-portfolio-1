@@ -179,8 +179,16 @@ nav .fas {
     justify-content: space-around;
   }
 
+  section p {
+    margin-bottom: auto;
+  }
+
   .hero {
     height: 60vh;
+  }
+
+  .flex-container--desktop {
+    display: flex;
   }
 
   .is-hidden--desktop {
