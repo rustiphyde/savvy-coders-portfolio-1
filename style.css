@@ -140,6 +140,37 @@ nav .fas {
   max-height: 420px;
 }
 
+/* Form */
+form,
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  padding: var(--base-spacing);
+}
+
+input,
+textarea {
+  border: solid thin black;
+  max-width: 80vw;
+}
+
+form div {
+  margin: var(--base-spacing);
+}
+
+input[type="submit"] {
+  background: var(--secondary);
+  border-radius: var(--base-spacing);
+  display: inline-block;
+  margin: var(--base-spacing) 0;
+  min-height: calc(var(--base-spacing) * 6);
+  max-width: calc(var(--base-spacing) * 12);
+  text-align: center;
+}
+
 /* This should apply for tablets and above! */
 @media screen and (min-width: 768px) {
   section {
