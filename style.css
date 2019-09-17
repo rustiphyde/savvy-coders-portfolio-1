@@ -222,6 +222,10 @@ input[type="submit"] {
     display: flex;
   }
 
+  .flex-row--desktop {
+    flex-direction: row;
+  }
+
   .is-hidden--desktop {
     font-size: 0;
     height: 0;
