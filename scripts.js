@@ -1,10 +1,16 @@
 // Write a fxn. to where I can pass in a string that will end up being in the window prompt
 
-// TODO: Replace <h1> with the answer from the question.
 function greeter(question = "What is your name?") {
-  return prompt(question);
+  let answer = prompt(question);
+
+  if (answer === "") {
+    greeter(); // recursion
+  }
+
+  return answer;
 }
 
+// TODO: Resolve issue where h1 is not updated if user gives blank answer
 document.querySelector("h1").textContent = greeter();
 
 // const answer = greeter();
