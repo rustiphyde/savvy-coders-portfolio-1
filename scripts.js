@@ -4,7 +4,7 @@ function greeter(question = "What is your name?") {
   let answer = prompt(question);
 
   if (answer === "") {
-    greeter(); // recursion
+    return greeter(); // recursion
   }
 
   return answer;
