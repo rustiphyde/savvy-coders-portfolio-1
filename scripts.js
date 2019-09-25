@@ -13,8 +13,10 @@ function greeter(question = "What is your name?") {
 // // We are GETTING the value of the textContent property - WE ARE NOT SETTING IT!
 // const getter = document.querySelector("h1").textContent;
 
-// TODO: Resolve issue where h1 is not updated if user gives blank answer
-document.querySelector("h1").textContent = greeter();
+// document.querySelector("#root").innerHTML = "<p>" + greeter() + "</p>";
+
+document.querySelector("#root").innerHTML = `<p>${greeter()}</p>`
+// document.querySelector("#root").textContent = "<p>Hello World!</p>";
 
 // const answer = greeter();
 // document.querySelector("h1").textContent = answer
