@@ -1,4 +1,5 @@
-export default `<footer>
+export default function() {
+  return `<footer>
       <ul>
         <li><a href="./">Home</a></li>
         <li><a href="./about/">About</a></li>
@@ -9,3 +10,4 @@ export default `<footer>
       <p>&copy; 2019 Manav Misra &bullet; No rights reserved!</p>
     </footer>
 `;
+}
