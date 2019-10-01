@@ -9,7 +9,7 @@ const state = {
   home: {
     heading: "Home Page"
   },
-  about: {
+  About: {
     heading: "About Page"
   }
 };
@@ -25,3 +25,26 @@ document.querySelector("#root").innerHTML = `
   ${Main()}
   ${Footer()}
 `;
+
+const aboutLink = document.querySelector('#about');
+
+aboutLink.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  /**
+   * TODO: Re-render the page again,
+   * using the appropriate data from state so that we get the updated heading.
+   * HINT: render()
+   */
+  const aboutElement = event.target;
+  console.log('aboutElement is', aboutElement);
+
+  const aboutText = event.target.textContent;
+  console.log('about text is:', aboutText);
+  console.log(state[aboutText]);
+
+
+
+
+  console.log('you clicked me!');
+})
