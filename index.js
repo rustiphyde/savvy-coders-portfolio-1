@@ -1,7 +1,5 @@
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+// Object
+import { Header, Nav, Main, Footer } from "./components";
 
 /**
  * Currently, #root div is empty.
