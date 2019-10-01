@@ -3,9 +3,6 @@ import Nav from "./components/Nav";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
-console.log(typeof Header);
-console.log(typeof Nav);
-
 /**
  * Currently, #root div is empty.
  * We want to grab that #root div.

@@ -1,4 +1,4 @@
-export default function() {
+export default function(year = 2019) {
   return `<footer>
       <ul>
         <li><a href="./">Home</a></li>
@@ -7,7 +7,7 @@ export default function() {
         <li><a href="./gallery/">Gallery</a></li>
         <li><a href="./blog/">Blog</a></li>
       </ul>
-      <p>&copy; 2019 Manav Misra &bullet; No rights reserved!</p>
+      <p>&copy; ${year} Manav Misra &bullet; No rights reserved!</p>
     </footer>
 `;
 }
