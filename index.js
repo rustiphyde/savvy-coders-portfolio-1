@@ -19,32 +19,23 @@ const state = {
  * We want to grab that #root div.
  * We want to assign the markup that is contained in the components as the innerHTML of root.
  */
+// The parameter st represents a piece of state
+function render(st = state.home) {
 document.querySelector("#root").innerHTML = `
-  ${Header(state.home.heading)}
+  ${Header(st.heading)}
   ${Nav()}
   ${Main()}
   ${Footer()}
 `;
+}
+
+render();
 
 const aboutLink = document.querySelector('#about');
 
 aboutLink.addEventListener('click', function(event) {
   event.preventDefault();
 
-  /**
-   * TODO: Re-render the page again,
-   * using the appropriate data from state so that we get the updated heading.
-   * HINT: render()
-   */
-  const aboutElement = event.target;
-  console.log('aboutElement is', aboutElement);
-
-  const aboutText = event.target.textContent;
-  console.log('about text is:', aboutText);
-  console.log(state[aboutText]);
-
-
-
-
-  console.log('you clicked me!');
+  // In this case, we are accessing state.About
+  render(state[event.target.textContent]);
 })
