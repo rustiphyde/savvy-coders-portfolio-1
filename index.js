@@ -9,7 +9,7 @@ const state = {
   home: {
     heading: "Home Page"
   },
-  About: {
+  about: {
     heading: "About Page"
   }
 };
@@ -21,7 +21,7 @@ const state = {
  */
 // The parameter st represents a piece of state
 function render(st = state.home) {
-document.querySelector("#root").innerHTML = `
+  document.querySelector("#root").innerHTML = `
   ${Header(st.heading)}
   ${Nav()}
   ${Main()}
@@ -31,11 +31,14 @@ document.querySelector("#root").innerHTML = `
 
 render();
 
-const aboutLink = document.querySelector('#about');
+const links = document.querySelectorAll("nav a");
 
-aboutLink.addEventListener('click', function(event) {
-  event.preventDefault();
+for (let i = 0; i < links.length; i += 1) {
+  links[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    // In this case, we are accessing state.About
+    console.log(event.target.textContent);
 
-  // In this case, we are accessing state.About
-  render(state[event.target.textContent]);
-})
+    // TODO: Make sure that the string is converted to
+  })
+}
