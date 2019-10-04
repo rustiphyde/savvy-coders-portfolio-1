@@ -7,19 +7,24 @@ import { Header, Nav, Main, Footer } from "./components";
  */
 const state = {
   home: {
-    heading: "Home Page"
+    heading: "Home Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   about: {
-    heading: "About Page"
+    heading: "About Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   contact: {
-    heading: "Contact Page"
+    heading: "Contact Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   blog: {
-    heading: "Blog Page"
+    heading: "Blog Page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   gallery: {
-    heading: "GAllery page"
+    heading: "GAllery page",
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   }
 };
 
@@ -32,7 +37,7 @@ const state = {
 function render(st = state.home) {
   document.querySelector("#root").innerHTML = `
   ${Header(st.heading)}
-  ${Nav()}
+  ${Nav(st)}
   ${Main()}
   ${Footer()}
 `;
@@ -43,9 +48,9 @@ render();
 const links = document.querySelectorAll("nav a");
 
 for (let i = 0; i < links.length; i += 1) {
-  links[i].addEventListener('click', function(event) {
+  links[i].addEventListener("click", function(event) {
     event.preventDefault();
     // In this case, we are accessing state.About
     render(state[event.target.textContent.toLowerCase()]);
-  })
+  });
 }
