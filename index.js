@@ -1,32 +1,6 @@
 // Object
 import { Header, Nav, Main, Footer } from "./components";
-
-/**
- * Use `state` to render the appropriate heading depending on the state of the app.
- * What page is currently selected or being displayed.
- */
-const state = {
-  home: {
-    heading: "Home Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  about: {
-    heading: "About Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  contact: {
-    heading: "Contact Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  blog: {
-    heading: "Blog Page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  gallery: {
-    heading: "GAllery page",
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  }
-};
+import { Home, About, Contact, Blog, Gallery, Links } from "./store";
 
 /**
  * Currently, #root div is empty.
@@ -34,7 +8,7 @@ const state = {
  * We want to assign the markup that is contained in the components as the innerHTML of root.
  */
 // The parameter st represents a piece of state
-function render(st = state.home) {
+function render(st = Home) {
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(st)}
@@ -51,6 +25,6 @@ for (let i = 0; i < links.length; i += 1) {
   links[i].addEventListener("click", function(event) {
     event.preventDefault();
     // In this case, we are accessing state.About
-    render(state[event.target.textContent.toLowerCase()]);
+    render(event.target.textContent);
   });
 }
