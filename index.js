@@ -36,7 +36,7 @@ const state = {
 // The parameter st represents a piece of state
 function render(st = state.home) {
   document.querySelector("#root").innerHTML = `
-  ${Header(st.heading)}
+  ${Header(st)}
   ${Nav(st)}
   ${Main()}
   ${Footer()}

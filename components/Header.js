@@ -1,4 +1,4 @@
-export default function(heading = "Manav Misra Practice Project") {
+export default function(st) {
   return `<header>
       <figure>
         <img
@@ -12,7 +12,7 @@ export default function(heading = "Manav Misra Practice Project") {
           alt="Lorem Picsum"
         />
       </figure>
-      <h1>${heading}</h1>
+      <h1>${st.heading}</h1>
     </header>
 `;
 }
