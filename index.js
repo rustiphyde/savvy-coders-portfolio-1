@@ -11,6 +11,15 @@ const state = {
   },
   about: {
     heading: "About Page"
+  },
+  contact: {
+    heading: "Contact Page"
+  },
+  blog: {
+    heading: "Blog Page"
+  },
+  gallery: {
+    heading: "GAllery page"
   }
 };
 
@@ -37,8 +46,6 @@ for (let i = 0; i < links.length; i += 1) {
   links[i].addEventListener('click', function(event) {
     event.preventDefault();
     // In this case, we are accessing state.About
-    console.log(event.target.textContent);
-
-    // TODO: Make sure that the string is converted to
+    render(state[event.target.textContent.toLowerCase()]);
   })
 }
