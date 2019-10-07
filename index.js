@@ -1,6 +1,8 @@
 // Object
 import { Header, Nav, Main, Footer } from "./components";
-import { Home, About, Contact, Blog, Gallery, Links } from "./store";
+import * as state from "./store";
+
+console.log(state)
 
 /**
  * Currently, #root div is empty.
@@ -8,10 +10,17 @@ import { Home, About, Contact, Blog, Gallery, Links } from "./store";
  * We want to assign the markup that is contained in the components as the innerHTML of root.
  */
 // The parameter st represents a piece of state
-function render(st = Home) {
+function render(st = state.Home) {
+
+  /**
+   * Developer's Note: Since state.Links is static,
+   * there is no reason to pass it in each time.
+   *
+   * Instead, 'Nav' can import 'Links' directly.
+   */
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
-  ${Nav(st)}
+  ${Nav()}
   ${Main()}
   ${Footer()}
 `;
@@ -24,7 +33,6 @@ const links = document.querySelectorAll("nav a, footer a");
 for (let i = 0; i < links.length; i += 1) {
   links[i].addEventListener("click", function(event) {
     event.preventDefault();
-    // In this case, we are accessing state.About
-    render(event.target.textContent);
+    render(state[event.target.textContent]);
   });
 }
