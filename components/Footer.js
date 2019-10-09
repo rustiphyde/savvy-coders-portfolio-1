@@ -1,5 +1,4 @@
-export default function(year = 2019) {
-  return `<footer>
+export default (year = 2019) => `<footer>
       <ul>
         <li><a href="./">Home</a></li>
         <li><a href="./about/">About</a></li>
@@ -10,4 +9,4 @@ export default function(year = 2019) {
       <p>&copy; ${year} Manav Misra &bullet; No rights reserved!</p>
     </footer>
 `;
-}
+
